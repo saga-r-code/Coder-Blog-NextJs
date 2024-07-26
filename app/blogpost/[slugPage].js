@@ -11,4 +11,4 @@ const slugPage = () => {
   )
 }
 
-export default slugPage
+export default slugPage 
