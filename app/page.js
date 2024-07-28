@@ -2,10 +2,13 @@
 import React from "react";
 import Navbar from "@/Components/Navbar";
 // import Styles from "./home.module.css";
+import Image from "../Components/Image";
 
 const page = () => {
   return (
-    <div className="container">
+    <div>
+      <Image />
+      <Navbar />
       <style jsx>
         {`
           .heading {
@@ -13,27 +16,22 @@ const page = () => {
           }
         `}
       </style>
-
-      <div className="imagewrapper  fixed -z-10 ">
-        <img src="/background-image.avif" alt="" className="w-[100vw] h-[100vh]"/>
-      </div>
-      <Navbar />
-      <div className="blog-contain p-5 ">
-        <h1 className="heading text-5xl text-center font-bold underline-offset-4 decoration-4 underline">
+      <div className="blog-contain p-10 container md:w-1/2 m-auto text-[#FAF9F6]">
+        <h1 className=" text-5xl text-center font-bold underline-offset-4 decoration-4 underline text-slate-400">
           Coder Blog
         </h1>
-        <div className="popular-blog my-20 flex justify-center items-center flex-col">
-          <h2 className="text-2xl font-bold">Popular Blog</h2>
+        <div className="popular-blog my-16 flex justify-center items-center flex-col">
+          <h2 className="text-3xl font-bold text-slate-300 ">Popular Blog</h2>
           <div className="blog m-7 flex flex-col gap-2">
             <h3 className="text-xl font-semibold">
               How to learn JavaScript in 2024
             </h3>
-            <p>
+            <p className="text-slate-400">
               JavaScript is the language used to design logic for the web page
             </p>
           </div>
           <div className="blog  m-7 flex flex-col gap-2">
-            <h3 className="text-xl font-semibold">
+            <h3 className="text-xl font-semibold ">
               How to learn JavaScript in 2024
             </h3>
             <p>
