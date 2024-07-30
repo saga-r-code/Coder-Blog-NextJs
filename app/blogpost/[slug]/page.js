@@ -6,7 +6,7 @@ import Navbar from '@/Components/Navbar'
 
 const Slug = () => {
   const params = useParams();
-  const slug = params.slug; // Ensure correct parameter access
+  const slug = params.slug; 
 
   return (
     <>

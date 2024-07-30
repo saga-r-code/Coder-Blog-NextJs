@@ -14,7 +14,7 @@ const About = () => {
       <div className="text-slate-400  my-6 mx-3 bg-opacity-30 backdrop-blur-md rounded-lg shadow-lg  border-white/20 border p-8">
       <section>
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold p-5">
+          <h1 className="text-5xl font-bold p-5 text-white">
             <u>About Coder Blog</u>
           </h1>
           <p className="mt-4 text-lg">
@@ -41,7 +41,7 @@ const About = () => {
               target="_blank"
             >
               <b>
-                <u>Sagar Shah</u>
+                <u className="text-white">Sagar Shah</u>
               </b>
             </Link>
           </p>
