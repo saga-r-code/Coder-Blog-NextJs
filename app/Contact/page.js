@@ -8,7 +8,9 @@ const conatct = () => {
     <div>
       <Image />
       <Navbar />
+      <div className="text-center text-white">
       this is conatct page
+      </div>
     </div>
   )
 }

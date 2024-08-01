@@ -1,6 +1,7 @@
 {
-    "title": "How To Learn JavaScript",
+    "title": "How To Learn React js",
     "content": "Examples are better than 1000 words. Examples are often easier to understand than text explanations. This tutorial supplements all explanations with clarifying Try it Yourself examples. If you try all the examples, you will learn a lot about JavaScript, in a very short time!",
-    "author":"Sagar Shah"
+    "author":"Sagar Shah",
+    "slug": "How-To-Learn-ReactJs"
     
 }
