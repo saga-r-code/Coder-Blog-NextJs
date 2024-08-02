@@ -16,9 +16,7 @@ const Slug = () => {
       if (!slug) return; // Return if slug is not available
 
       try {
-        const data = await fetch(
-          `http://localhost:3000/api/getblog?slug=${slug}`
-        );
+        const data = await fetch(`http://localhost:3000/api/getblog?slug=${slug}`);
         const response = await data.json();
         // console.log(response); //show in terminal
         setBlog(response);
