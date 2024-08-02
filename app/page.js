@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Navbar from "@/Components/Navbar";
-// import Styles from "./home.module.css";
 import Image from "../Components/Image";
 
 const page = () => {

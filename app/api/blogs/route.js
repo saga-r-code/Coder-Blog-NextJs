@@ -1,3 +1,5 @@
+// http://localhost:3000/api/blogs
+
 import fs from "fs/promises"; // Import the promises API from the fs module
 export async function GET() {
   try {
