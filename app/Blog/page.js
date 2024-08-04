@@ -3,6 +3,7 @@ import Navbar from "@/Components/Navbar";
 import Image from "@/Components/Image";
 import Link from "next/link";
 
+//SERVER SIDE RENDERING
 export async function fetchBlog() {
     // Fetch the data from your API endpoint
     const res = await fetch("http://localhost:3000/api/blogs",{
