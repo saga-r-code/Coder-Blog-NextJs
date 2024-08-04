@@ -12,7 +12,7 @@ export async function GET() {
     for (let index = 0; index < data.length; index++) {
       //run untill data was end
       const item = data[index]; //store all data
-      console.log(item);
+      console.log(item);// show item blog
       myfile = await fs.readFile("blogdata/" + item, "utf-8"); //item was read as string
       allblogs.push(JSON.parse(myfile)); //convert myfile data as object
     }
