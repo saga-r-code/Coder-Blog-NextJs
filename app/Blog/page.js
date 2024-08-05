@@ -1,14 +1,18 @@
-// This component is automatically a server component
 import Navbar from "@/Components/Navbar";
 import Image from "@/Components/Image";
 import Link from "next/link";
 
-//SERVER SIDE RENDERING
+// This component is automatically a server component
+//SERVER SIDE RENDERING fetchBlog()
+
+// Static Generation with ISR
+export const revalidate = 60;
+
 export async function fetchBlog() {
     // Fetch the data from your API endpoint
     const res = await fetch("http://localhost:3000/api/blogs",{
       cache: "no-cache"// Ensures SSR with no caching
-    })
+    })     
 
     if(!res.ok){
       throw new Error('Failed to fetch data')
@@ -16,6 +20,15 @@ export async function fetchBlog() {
 
     return res.json();
   }
+
+  // Generates static paths for each blog post by using the slugs
+export async function genrateStaticParams(params) {
+
+  const blogs = await fetchBlog()
+  return blogs.map((blog) =>{
+    slug: blog.slug //return a map of params and get slug
+  })
+}
 
 
 const Blog = async () => {
