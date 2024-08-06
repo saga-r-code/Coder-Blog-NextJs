@@ -9,7 +9,7 @@ const conatct = () => {
     <div>
       <Image />
       <Navbar />
-      <div className="text-center text-white">
+      <div className="text-center text-white justify-center items-center">
       this is conatct page
       </div>
     </div>

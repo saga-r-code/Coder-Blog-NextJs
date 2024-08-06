@@ -4,9 +4,8 @@ import Navbar from "@/Components/Navbar";
 
 //slugBlog() fetchAllBlog() genrateStaticParams()
 
-
 // Fetch all slugs for dynamic routes
-async function fetchAllBlog(params) {
+async function fetchAllBlog() {
   const res = await fetch("http://localhost:3000/api/blogs",{
     cache: "no-store",// Ensures SSR with no caching
   })// API get all blog
@@ -32,7 +31,6 @@ async function fetchAllBlog(params) {
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-
   return res.json();
 }
 
@@ -49,12 +47,14 @@ export async function genrateStaticParams() {
 const Slug = async ({ params }) => {
   // const [blog, setBlog] = useState(null);
   // const params = useParams(); // Access route parameters immediately
-
   const { slug } = params; // Extract the slug from the params
 
   try {
     const blog = await slugBlog(slug); // Fetch the blog data using the slugBlog function
-
+    //more attractive blog for add styling using createHTMLmarkup() function
+    function createHTMLmarkup(){
+      return { __html: blog.content }
+    }
     return (
       <>
         <Image />
@@ -64,7 +64,7 @@ const Slug = async ({ params }) => {
             {blog ? (
               <>
                 <h1 className="text-4xl font-semibold ">{blog.title}</h1>
-                <p>{blog.content}</p>
+                <div dangerouslySetInnerHTML={createHTMLmarkup()} ></div>
               </>
             ) : (
               <p>Loading....</p>
@@ -73,8 +73,8 @@ const Slug = async ({ params }) => {
         </div>
       </>
     );
-    // try block complete
-  } catch (error) {
+  } // try block complete
+  catch (error) {
     <div className="javascript-page w-9/12 mx-auto">
       <div className="text-center py-16 text-white gap-5 flex justify-center items-center flex-col">
         <h1 className="text-4xl font-semibold">Error</h1>

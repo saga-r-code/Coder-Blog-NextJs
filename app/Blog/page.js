@@ -49,9 +49,9 @@ const Blog = async () => {
                 <h3 className="text-xl font-semibold">{blog.title}</h3>
               </Link>
               <p className="text-slate-400 text-center">
-                {blog.content.length > 100
-                  ? blog.content.substr(0, 100) + "....."
-                  : blog.content}
+                {blog.metadesc.length > 100
+                  ? blog.metadesc.substr(0, 100) + "....."
+                  : blog.metadesc}
               </p>
             </div>
           );
